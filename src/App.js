@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import './styles.css';
 import EnhancedPICOTSFramework from './EnhancedPICOTSFramework';
 import RWEvsRCTTool from './RWEvsRCTTool';
@@ -8,8 +9,29 @@ import HeaderWithIconography from './HeaderWithIconography'; // Import the new h
 const HealthAnalyticsDashboard = () => {
   const [activeTab, setActiveTab] = useState('screening');
 
+  // Get the title based on active tab
+  const getPageTitle = () => {
+    switch(activeTab) {
+      case 'screening':
+        return 'Screening Test Calculator | Health Analytics Dashboard';
+      case 'picots':
+        return 'PICOTS Framework | Health Analytics Dashboard';
+      case 'rwerct':
+        return 'RWE vs RCT Tool | Health Analytics Dashboard';
+      case 'sixps':
+        return 'Six P\'s of Healthcare | Health Analytics Dashboard';
+      default:
+        return 'Health Analytics Dashboard';
+    }
+  };
+
   return (
     <div className="dashboard-container">
+      <Helmet>
+        <title>HCAS Final Challenge</title>
+        <meta name="description" content="Interactive tools for health analytics and screening calculations" />
+      </Helmet>
+
       {/* Use the new header component */}
       <HeaderWithIconography />
 
