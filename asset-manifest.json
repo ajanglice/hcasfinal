@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/hcasfinal/static/css/main.368afd33.css",
+    "main.js": "/hcasfinal/static/js/main.c6a1df8d.js",
+    "static/js/453.8494487a.chunk.js": "/hcasfinal/static/js/453.8494487a.chunk.js",
+    "static/media/ozempic-logo.png": "/hcasfinal/static/media/ozempic-logo.47a4761209e1929b059c.png",
+    "index.html": "/hcasfinal/index.html",
+    "main.368afd33.css.map": "/hcasfinal/static/css/main.368afd33.css.map",
+    "main.c6a1df8d.js.map": "/hcasfinal/static/js/main.c6a1df8d.js.map",
+    "453.8494487a.chunk.js.map": "/hcasfinal/static/js/453.8494487a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.368afd33.css",
+    "static/js/main.c6a1df8d.js"
+  ]
+}
