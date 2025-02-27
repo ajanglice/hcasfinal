@@ -1,69 +1,5 @@
 import React, { useState } from 'react';
-import './styles.css';
-import EnhancedPICOTSFramework from './EnhancedPICOTSFramework';
-import RWEvsRCTTool from './RWEvsRCTTool';
-import SixPsHealthcare from './SixPsHealthcare';
-import HeaderWithIconography from './HeaderWithIconography'; // Import the new header component
-
-const HealthAnalyticsDashboard = () => {
-  const [activeTab, setActiveTab] = useState('screening');
-
-  return (
-    <div className="dashboard-container">
-      {/* Use the new header component */}
-      <HeaderWithIconography />
-
-      <main className="dashboard-main">
-        {/* Tab Navigation */}
-        <div className="tabs-container">
-          <nav className="tabs-nav">
-            <button
-              onClick={() => setActiveTab('screening')}
-              className={`tab ${activeTab === 'screening' ? 'active' : ''}`}
-            >
-              Screening Test Calculator
-            </button>
-            <button
-              onClick={() => setActiveTab('picots')}
-              className={`tab ${activeTab === 'picots' ? 'active' : ''}`}
-            >
-              PICOTS Framework
-            </button>
-            <button
-              onClick={() => setActiveTab('rwerct')}
-              className={`tab ${activeTab === 'rwerct' ? 'active' : ''}`}
-            >
-              RWE vs RCT Tool
-            </button>
-            <button
-              onClick={() => setActiveTab('sixps')}
-              className={`tab ${activeTab === 'sixps' ? 'active' : ''}`}
-            >
-              Six P's of Healthcare
-            </button>
-          </nav>
-        </div>
-
-        {/* Tab Content */}
-        <div className="tab-content">
-          {activeTab === 'screening' ? (
-            <ScreeningCalculator />
-          ) : activeTab === 'picots' ? (
-            <EnhancedPICOTSFramework />
-          ) : activeTab === 'rwerct' ? (
-            <RWEvsRCTTool />
-          ) : (
-            <SixPsHealthcare />
-          )}
-        </div>
-      </main>
-
-      <footer className="dashboard-footer">
-        <p>Created for HCAS Final Challenge - Winter 2025</p>
-      </footer>
-    </div>
-  );
-};
+import './PICOTSScreeningDashboard.css';
 
 const ScreeningCalculator = () => {
   const [values, setValues] = useState({
@@ -242,8 +178,4 @@ const ScreeningCalculator = () => {
   );
 };
 
-
-
-
-
-export default HealthAnalyticsDashboard;
+export default ScreeningCalculator;
